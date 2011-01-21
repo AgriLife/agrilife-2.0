@@ -30,6 +30,7 @@
 <meta http-equiv="Content-Language" content="English" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta name="Robots" content="index,follow" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_get_archives('type=monthly&format=link'); ?>
 
