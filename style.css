@@ -150,7 +150,7 @@ td { padding: 5px;}
 .rss-date { display: none;}
 
 /* header */
-h1.header-title { font-size: 60px; letter-spacing: -3px;}
+h1.header-title { font-size: 42px; letter-spacing: -1px;}
 h1.header-title span {top: 0;}
 .header-title a {color: #5D0025;}
 
@@ -545,16 +545,18 @@ div.banner {
   margin: 0;
   padding: 0 0 10px 0;
   text-align:center;
-  background: url(images/bkgd-sidebar-b.gif) no-repeat left bottom;
   width: 230px;
 }
 div#sidebar, div.sidebar {
 background: none;
 }
 div#sidebar-box, div.sidebar-box {
-  background: url(images/bkgd-sidebar-t.gif) no-repeat left top #f1f1ea;
+  background: #f1f1ea;
   padding: 0 ;
   margin: 0 0 15px 0;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;	
+	border-radius: 8px;	
 }
 li.current_page_item a {text-decoration: underline;}
 li.current_page_item ul a {text-decoration: none;}
@@ -886,3 +888,88 @@ h3.directory-mainnumber {
 }
 
 .break { clear: both; }
+
+
+/**********************************************************
+
+@media queries for mobile display
+
+**********************************************************/
+
+
+/* Mobile Safari ( iPad, iPhone and iPod Touch )
+-------------------------------------------------------------- */
+
+pre {
+	-webkit-text-size-adjust: 140%;
+}
+code {
+	-webkit-text-size-adjust: 160%;
+}
+#access,
+.entry-meta,
+.entry-utility,
+.navigation,
+.widget-area {
+	-webkit-text-size-adjust: 120%;
+}
+#site-description {
+	-webkit-text-size-adjust: none;
+}
+
+/* mobile adjustments */
+@media all and (max-width: 1024px) {
+	
+	body {  
+	    font-size: 110%;
+	}
+	
+	#main div#main-box {
+		width: 100%;
+	    line-height: 1.75em;
+		padding: 0 30px;		
+	}
+	
+	#main div#sidecontent {
+	    width: 100%;
+		float: none;
+	}
+	
+	#main 	div#sidebar, div.sidebar {
+	    width: 100%;
+	}
+	
+	#main .right-col {
+	   	float: left;
+	}	
+	div#main-box-bottom {
+		width: 100%;
+		background: none;
+	}
+	
+	#main_content .post .post-content {
+		width: 100%;
+	}
+		
+@media all and (max-width: 640px) {
+
+	body {  
+	    font-size: 120%;
+	}
+
+	#main div#main-box {
+		width: 100%;
+	    line-height: 1.75em;
+		padding: 0 30px;
+	}
+
+	#main div#sidecontent {
+	    width: 100%;
+		float: none;
+	}
+
+	#main 	div#sidebar, div.sidebar {
+	    width: 100%;
+	}	
+				
+}
