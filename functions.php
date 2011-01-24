@@ -163,7 +163,7 @@ function theme_js_head_load(){
 		wp_enqueue_script('jquery-plugins', THEME_TEMPLATEURL.'/scripts/jquery.plugins.js', array('jquery'), '1.1');
 		wp_enqueue_script('theme-nav', THEME_TEMPLATEURL.'/scripts/inner.js', array('jquery'), '1.0');
 		wp_enqueue_script('jquery-cycle', THEME_TEMPLATEURL.'/scripts/jquery.cycle.js', array('jquery'), '2.63');
-		wp_enqueue_script('cufon', THEME_TEMPLATEURL.'/scripts/cufon.js');
+
 
 	}
 }

@@ -10,6 +10,20 @@ Tags: fixed width, two columns
 /* This should be the last sheet in the cascade.  All other unit style sheets are unchanged except structure */
 /* Sitestyle was moved here */
 
+
+/* Import fonts via @font-face
+-------------------------------------------------------------- */
+
+@font-face {
+ font-family: Arno Pro;
+ src: url("fonts/ArnoPro-Regular.eot"); /* EOT file for IE */
+}
+@font-face {
+ font-family: Arno Pro;
+ src: url("fonts/ArnoPro-Regular.otf"); /* TTF file for CSS3 browsers */
+}
+
+
 /**********************************************************
 
 Features - Slideshow
@@ -150,7 +164,7 @@ td { padding: 5px;}
 .rss-date { display: none;}
 
 /* header */
-h1.header-title { font-size: 42px; letter-spacing: -1px;}
+h1.header-title { font-size: 42px; font-family: Arno Pro; }
 h1.header-title span {top: 0;}
 .header-title a {color: #5D0025;}
 
@@ -280,7 +294,7 @@ New CSS for Wordpress
 #main_content .post h2.storytitle { line-height: 1.1em; margin-top: 0.3em;}
 #main_content .post h2.storytitle a { text-decoration: none;}
 #main_content .post h2.storytitle a:hover { text-decoration: underline; color: #5D0025;}
-.blog #main_content .post .storycontent { font-size: .9em;}
+.blog #main_content .post .storycontent { font-size: .9em; clear: both;}
 
 #main_content .post{clear: both; width: 100%; padding: 10px 0;}
 
@@ -900,23 +914,6 @@ h3.directory-mainnumber {
 /* Mobile Safari ( iPad, iPhone and iPod Touch )
 -------------------------------------------------------------- */
 
-pre {
-	-webkit-text-size-adjust: 140%;
-}
-code {
-	-webkit-text-size-adjust: 160%;
-}
-#access,
-.entry-meta,
-.entry-utility,
-.navigation,
-.widget-area {
-	-webkit-text-size-adjust: 120%;
-}
-#site-description {
-	-webkit-text-size-adjust: none;
-}
-
 /* mobile adjustments */
 @media all and (max-width: 1024px) {
 	
@@ -950,7 +947,103 @@ code {
 	#main_content .post .post-content {
 		width: 100%;
 	}
-		
+
+	#main_content .post .post-meta {
+	display:inline;
+	right: 15px;
+	float: right;
+	position:relative;
+	text-align:right;
+	width: 75px;
+	}
+	.date-tab {background-color: #fff;}
+	.date-tab-t { width: 75px; height: 10px; background: none;}
+	.date-tab-b { width: 75px; height: 10px; background: none;}
+
+	#main_content .post .post-content { display:inline; margin-right:0px; width:80%; float: left;}
+	
+	/* home: blog style */
+
+	#main_content .post {width: 100%;}
+	#main_content .post h2.storytitle { line-height: 1.1em; margin-top: 0.3em;}
+	#main_content .post h2.storytitle a { text-decoration: none;}
+	#main_content .post h2.storytitle a:hover { text-decoration: underline; color: #5D0025;}
+	.blog #main_content .post .storycontent { font-size: .9em; clear: both;}
+
+
+	form#sitesearch input.search-box {
+		width: 80%;
+	}
+	
+	/**********************************************************
+
+	Agency tab navigation
+
+	**********************************************************/
+
+	ul#agrilife-agency-tabs {
+		bottom: 0;
+		height: 49px;
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+
+	ul#agrilife-agency-tabs li {
+		background: no-repeat 0 0;
+		float: left;
+		position: relative;
+	}	
+
+	ul#agrilife-agency-tabs li a {
+		display: block;
+		width: 100%;
+		font-size: 0;
+		height: 49px;
+		line-height: 0;
+		text-decoration: none;
+		text-indent: -999em;
+	}
+
+	ul#agrilife-agency-tabs li.research {
+		background: #2a4714;
+		width: 189px;
+	}
+	ul#agrilife-agency-tabs li.research a {
+		color: #2a4714;
+		width: 100%;
+	}
+
+	ul#agrilife-agency-tabs li.extension {
+		background-image: url(../images/tab-extension.gif);
+		background-position: -3px 0;
+		width: 198px;
+	}
+	ul#agrilife-agency-tabs li.extension a {
+		color: #024366;
+		width: 175px;
+	}
+
+	ul#agrilife-agency-tabs li.teaching {
+		background-image: url(../images/tab-college.gif);
+		background-position: -3px 0;
+		width: 190px;
+	}
+	ul#agrilife-agency-tabs li.teaching a {
+		color: #5d0025;
+		width: 167px;
+	}
+
+	ul#agrilife-agency-tabs li.service {
+		background-image: url(../images/tab-services.gif);
+		background-position: -3px 0;
+		height: 49px;
+		position: relative;
+		width: 215px;
+	}
+			
 @media all and (max-width: 640px) {
 
 	body {  
@@ -970,6 +1063,6 @@ code {
 
 	#main 	div#sidebar, div.sidebar {
 	    width: 100%;
-	}	
-				
+	}
+					
 }
