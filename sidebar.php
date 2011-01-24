@@ -8,7 +8,7 @@
 <div id="sidebar">
     <div class="sidebar-box">	    
         <label for="s" class="search"><?php _e('Search:'); ?></label>
-        <form id="sitesearch" method="get" action="<?php bloginfo('home'); ?>">
+        <form id="sitesearch" method="get" action="<?php bloginfo('home'); ?>/">
         <fieldset>
             <input type="text" name="s" id="s" maxlength="256" onfocus="this.value=''; this.onfocus=null;" value="Search" class="search-box" />
             <input type="image" src="<?php bloginfo('template_directory'); ?>/images/searchbutton.gif" value="<?php esc_attr_e('Search'); ?>" alt="Search" name="search" class="search-button"/>
