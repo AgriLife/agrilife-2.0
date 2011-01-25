@@ -922,11 +922,11 @@ h3.directory-mainnumber {
 	}
 	
 	#main div#main-box {
-		width: 100%;
+		width: 100% !important;
 	    line-height: 1.75em;
 		padding: 0 30px;		
 	}
-	
+		
 	#main div#sidecontent {
 	    width: 100%;
 		float: none;
@@ -977,18 +977,25 @@ h3.directory-mainnumber {
 	
 	/**********************************************************
 
-	Agency tab navigation
+	mobile Agency tab navigation
 
 	**********************************************************/
 
+	div#agrilife-header-box {
+		margin: 0 auto;
+		min-height: 50px;
+		height: auto !important;
+		position: relative;
+		width: 100%;
+		z-index: 30;
+	}
+	
 	ul#agrilife-agency-tabs {
-		bottom: 0;
-		height: 49px;
-		left: 0;
+		width: 100%;
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		position: absolute;
+		position: relative;
 	}
 
 	ul#agrilife-agency-tabs li {
@@ -1001,7 +1008,7 @@ h3.directory-mainnumber {
 		display: block;
 		width: 100%;
 		font-size: 0;
-		height: 49px;
+		height: 10px;
 		line-height: 0;
 		text-decoration: none;
 		text-indent: -999em;
@@ -1009,7 +1016,7 @@ h3.directory-mainnumber {
 
 	ul#agrilife-agency-tabs li.research {
 		background: #2a4714;
-		width: 189px;
+		width: 100%;
 	}
 	ul#agrilife-agency-tabs li.research a {
 		color: #2a4714;
@@ -1017,33 +1024,47 @@ h3.directory-mainnumber {
 	}
 
 	ul#agrilife-agency-tabs li.extension {
-		background-image: url(../images/tab-extension.gif);
-		background-position: -3px 0;
-		width: 198px;
+		background: #024366;
+		width: 100%;
 	}
 	ul#agrilife-agency-tabs li.extension a {
 		color: #024366;
-		width: 175px;
+		width: 100%;
 	}
 
 	ul#agrilife-agency-tabs li.teaching {
-		background-image: url(../images/tab-college.gif);
-		background-position: -3px 0;
-		width: 190px;
+		background: #5d0025;
+		width: 100%;
 	}
 	ul#agrilife-agency-tabs li.teaching a {
 		color: #5d0025;
-		width: 167px;
+		width: 100%;
 	}
 
 	ul#agrilife-agency-tabs li.service {
-		background-image: url(../images/tab-services.gif);
-		background-position: -3px 0;
-		height: 49px;
-		position: relative;
-		width: 215px;
+		background: #573c00;
+		width: 100%;
 	}
-			
+	
+	/**********************************************************
+
+	mobile Footer
+
+	**********************************************************/
+
+	div#agrilife-footer {
+		color: #333;
+		overflow: hidden;
+	}
+
+	div#agrilife-footer	div#agrilife-footer-box {
+		width: 100%;
+	}
+
+	div#agrilife-site-info ul {
+		width: 100%;
+	}
+					
 @media all and (max-width: 640px) {
 
 	body {  
