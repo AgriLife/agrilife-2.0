@@ -36,26 +36,23 @@
 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php if ( $options['feedBurner'] <> "" ) { echo $options['feedBurner']; } else { echo get_bloginfo_rss('rss2_url'); } ?>" />
 
-<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/main.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/structure.css?5" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/sitestyle-agrilife.css" media="screen" />
 <?php
 if($extensiononly) {
-    echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/extension.css" media="screen" />';
+    echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/extension.css" media="screen" />';
 } elseif ($researchonly) {
-	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/research.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/research.css" media="screen" />';
 } elseif ($collegeonly) {
-	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/college.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/college.css" media="screen" />';
 } elseif ($tvmdlonly) {
 } else {
-	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/secondary.css" media="screen" />';
-    echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/multi.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/secondary.css" media="screen" />';
+    echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/multi.css" media="screen" />';
 }
 ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/print.css" media="print" />
 
-<link rel="shortcut icon" href="<?php echo THEME_TEMPLATEURL;?>/favicon.ico" type="image/ico" />
+<link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/favicon.ico" type="image/ico" />
 
 <!-- head-->
 <?php wp_head(); ?>
