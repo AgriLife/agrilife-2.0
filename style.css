@@ -2,7 +2,7 @@
 Theme Name: AgriLife
 Theme URI: http://agriLife.org/
 Description: For Wordpress 3.0.  Adds support for Menus.
-Version: 2.0.8
+Version: 2.0.7
 Author: AgriLife Communications
 Tags: fixed width, two columns
 */
@@ -149,7 +149,7 @@ blockquote { font-style: italic; margin: 5px 20px;}
 .rss-date { display: none;}
 
 /* header */
-h1.header-title { text-rendering: optimizeLegibility; letter-spacing: -1px; font-family: "arno-pro-1","arno-pro-2", "Arno Pro"; font-size: 60px;}
+h1.header-title { font-size: 60px; letter-spacing: -3px;}
 h1.header-title span {top: 0;}
 .header-title a {color: #5D0025;}
 
