@@ -15,14 +15,20 @@ get_header();
 <div id="main_content"> 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 			<?php if ( !is_front_page() ) : ?>
 		  	  <h2><?php the_title(); ?></h2>
 		    <?php endif; ?>
+<<<<<<< HEAD
 =======
 
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <?php
 	$youTube = get_post_meta($post->ID, "youtube", true);
 	//Check for well-formed playlist url
@@ -49,6 +55,7 @@ $attachments = get_posts($args);
 -->
 <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     										
     
     	<?php if (count($attachments) > 0): ?>
@@ -59,6 +66,12 @@ $attachments = get_posts($args);
     	<?php if (count($attachments) > 0): ?>
         <div>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+    										
+    
+    	<?php if (count($attachments) > 0): ?>
+        	<div class="clear"></div>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
             <div id="features">
               <?php if($youTube!=''): ?>
               <ul class="tabs" id="featuresnav">
@@ -94,6 +107,7 @@ $attachments = get_posts($args);
               <?php endif; ?>
             </div><!-- #features-->		
 <<<<<<< HEAD
+<<<<<<< HEAD
         	<div class="clear"></div>
         <?php endif; ?>
         
@@ -108,11 +122,19 @@ $attachments = get_posts($args);
 			<!-- <h4 class="front-headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h4>-->
         	<p class="front-summary"><?php the_content(__('(more...)')); ?></p>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+        	<div class="clear"></div>
+        <?php endif; ?>
+        
+        
+        	<?php the_content(__('(more...)')); ?>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
         </div>
         <?php  endwhile; else: ?>
             <!-- <p><?php _e('Sorry, no posts matched your criteria.'); ?></p> -->
         <?php endif; ?>
         		
+<<<<<<< HEAD
 <<<<<<< HEAD
          
     </div>
@@ -131,6 +153,11 @@ $attachments = get_posts($args);
 
 
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+         
+    </div>
+	
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 
 				</div><!-- #main_content -->
 			</div><!-- #sidecontent -->

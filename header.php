@@ -31,14 +31,18 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta name="Robots" content="index,follow" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <meta name="viewport" content="width=device-width; initial-scale=1.0;">
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php wp_get_archives('type=monthly&format=link'); ?>
 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php if ( $options['feedBurner'] <> "" ) { echo $options['feedBurner']; } else { echo get_bloginfo_rss('rss2_url'); } ?>" />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/main.css" media="screen" />
 <link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/structure.css?5" media="screen" />
@@ -63,24 +67,34 @@ if($extensiononly) {
 
 <link rel="shortcut icon" href="<?php echo THEME_TEMPLATEURL;?>/favicon.ico" type="image/ico" />
 =======
+=======
+<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/main.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/structure.css?5" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/sitestyle-agrilife.css" media="screen" />
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <?php
 if($extensiononly) {
-    echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/extension.css" media="screen" />';
+    echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/extension.css" media="screen" />';
 } elseif ($researchonly) {
-	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/research.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/research.css" media="screen" />';
 } elseif ($collegeonly) {
-	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/college.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/college.css" media="screen" />';
 } elseif ($tvmdlonly) {
 } else {
-	echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/secondary.css" media="screen" />';
-    echo '<link rel="stylesheet" type="text/css" href="' ,bloginfo( 'template_url' ), '/css/multi.css" media="screen" />';
+	echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/secondary.css" media="screen" />';
+    echo '<link rel="stylesheet" type="text/css" href="'.THEME_TEMPLATEURL.'/css/multi.css" media="screen" />';
 }
 ?>
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
-<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_url' ); ?>/css/print.css" media="print" />
 
+<<<<<<< HEAD
 <link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/favicon.ico" type="image/ico" />
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>?4" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo THEME_TEMPLATEURL;?>/css/print.css" media="print" />
+
+<link rel="shortcut icon" href="<?php echo THEME_TEMPLATEURL;?>/favicon.ico" type="image/ico" />
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 
 <!-- head-->
 <?php wp_head(); ?>
@@ -153,10 +167,14 @@ if($extensiononly) {
                 <?php if ($istvmdl) : ?>
 				<li class="service">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<a class="tvmdl" href="http://tvmdl.tamu.edu">Texas Veterinary Medical Diagnostic Laboratory</a>
 =======
 					<a class="tvmdl" href="http://tvmdlweb.tamu.edu">Texas Veterinary Medical Diagnostic Laboratory</a>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+					<a class="tvmdl" href="http://tvmdl.tamu.edu">Texas Veterinary Medical Diagnostic Laboratory</a>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 					<a class="tfs" href="http://texasforestservice.tamu.edu">Texas Forest Service</a>
 					<span></span>
 					<ul>
@@ -226,6 +244,7 @@ if($extensiononly) {
 				   <div class="sub">
 				     <ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					   <li><a href="http://aglifesciences.tamu.edu/about-the-college/welcome-from-the-dean/">Welcome From The Dean</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/about/administration/">Administration</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/about/accomplishments/accomplishments-awards/">Achievements</a></li>
@@ -235,13 +254,21 @@ if($extensiononly) {
 				       <li><a href="http://aglifesciences.tamu.edu/about-the-college/strategic-plan-2010-2015/">Strategic Planning</a></li>
 =======
 					   <li><a href="http://aglifesciences.tamu.edu/about/welcome/">Welcome From The Dean</a></li>
+=======
+					   <li><a href="http://aglifesciences.tamu.edu/about-the-college/welcome-from-the-dean/">Welcome From The Dean</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				       <li><a href="http://aglifesciences.tamu.edu/about/administration/">Administration</a></li>
-				       <li><a href="http://aglifesciences.tamu.edu/about/accomplishments/awards.php">Achievements</a></li>
-				       <li><a href="http://aglifesciences.tamu.edu/about/facts/about-collegefacts.php">College Fact Sheet</a></li>
+				       <li><a href="http://aglifesciences.tamu.edu/about/accomplishments/accomplishments-awards/">Achievements</a></li>
+				       <li><a href="http://aglifesciences.tamu.edu/about-the-college/college-fact-sheet/">College Fact Sheet</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/academics/institutes-centers/">Institutes &amp; Centers</a></li>
+<<<<<<< HEAD
 				       <li><a href="http://agroadmaps.tamu.edu/">Academic Master Plan</a></li>
 				       <li><a href="http://provost.tamu.edu/strategic-planning-2010">Strategic Planning</a></li>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+				       <!--<li><a href="http://agroadmaps.tamu.edu/">Academic Master Plan</a></li>-->
+				       <li><a href="http://aglifesciences.tamu.edu/about-the-college/strategic-plan-2010-2015/">Strategic Planning</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				       <li><a href="http://aglifesciences.tamu.edu/contact/">Contacts</a></li>
 				     </ul>
 				   </div>
@@ -251,10 +278,14 @@ if($extensiononly) {
 				     <ul>
 				       <li><a href="http://aglifesciences.tamu.edu/newsletter/">Dean's eNewsletter</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				       <li><a href="http://aglifesciences.tamu.edu/news-and-events/">News &amp; Calendar</a></li>
 =======
 				       <li><a href="http://aglifesciences.tamu.edu/news/news_secondpage.php">News &amp; Calendar</a></li>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+				       <li><a href="http://aglifesciences.tamu.edu/news-and-events/">News &amp; Calendar</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				       <li><a href="http://agrilifenews.tamu.edu/">AgriLife News</a></li>
 				       <li><a href="http://tamunews.tamu.edu/">University News</a></li>
 				     </ul>
@@ -267,12 +298,17 @@ if($extensiononly) {
 				       <li><a href="http://aglifesciences.tamu.edu/academics/grad/grad_table/">Graduate Degrees</a></li>
 				       <li><a href="http://admissions.tamu.edu/transfer/">Transfer Guide</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				       <li><a href="http://admissions.tamu.edu/international/gettingin/waysAdmitted/freshmen.aspx">Internationals</a></li>
 				       <li><a href="http://distance.tamu.edu/">Distance Education</a></li>
 =======
 				       <li><a href="http://admissions.tamu.edu/freshmen/intnl.aspx">Internationals</a></li>
 				       <li><a href="http://dist-ed.tamu.edu/">Distance Education</a></li>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+				       <li><a href="http://admissions.tamu.edu/international/gettingin/waysAdmitted/freshmen.aspx">Internationals</a></li>
+				       <li><a href="http://distance.tamu.edu/">Distance Education</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				       <li><a href="http://aglifesciences.tamu.edu/future/undergrad/">Admissions</a></li>
 					   <li><a href="http://aglifesciences.tamu.edu/future/financialaid/">Financial Aid</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/future/undergrad/tours/">Visit Us!</a></li>
@@ -284,6 +320,7 @@ if($extensiononly) {
 				   <div class="sub">
 				     <ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				       <li><a href="http://aglifesciences.tamu.edu/people/former/">Former Students</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/people/students/">Current Students</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/people/facultystaff/">Faculty &amp; Staff</a></li>
@@ -292,6 +329,11 @@ if($extensiononly) {
 				       <li><a href="http://aglifesciences.tamu.edu/students/">Current Students</a></li>
 				       <li><a href="http://aglifesciences.tamu.edu/facultystaff/">Faculty &amp; Staff</a></li>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+				       <li><a href="http://aglifesciences.tamu.edu/people/former/">Former Students</a></li>
+				       <li><a href="http://aglifesciences.tamu.edu/people/students/">Current Students</a></li>
+				       <li><a href="http://aglifesciences.tamu.edu/people/facultystaff/">Faculty &amp; Staff</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				       <li><a href="http://jobsforaggies.tamu.edu/">Jobs for Aggies</a></li>
 				     </ul>
 				   </div>
@@ -302,6 +344,7 @@ if($extensiononly) {
 					   <li><a href="http://aglifesciences.tamu.edu/giving/">It&rsquo;s Time To Give</a></li>
 				       <li><a href="http://coadc.tamu.edu/">College Development</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				     </ul>
 				   </div>
 				 </li>
@@ -310,11 +353,18 @@ if($extensiononly) {
 				
 =======
 				       <li><a href="http://aglifesciences.tamu.edu/library/files/2009%20COALS_Registry%20of%20Scholarships.pdf">Scholarship Registry</a></li>
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				     </ul>
 				   </div>
 				 </li>
+				 <li class="ask-admissions"><a href="http://aglifesciences.tamu.edu/ask/" onclick="parent.location='http://aglifesciences.tamu.edu/ask/'" title="Ask Admissions">Ask Admissions</a></li>
 				</ul>
+<<<<<<< HEAD
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+				
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
   			
 				
 				<?php elseif($extensiononly) : ?>
@@ -326,9 +376,13 @@ if($extensiononly) {
       <ul>
         <li><a href="http://agrilifeextension.tamu.edu/programs/index.php" title="">Programs Overview</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <li><a href="http://agrilifeextension.tamu.edu/programs/continuinged/index.php" title="">Certification and Continuing Education</a></li>
 =======
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+        <li><a href="http://agrilifeextension.tamu.edu/programs/continuinged/index.php" title="">Certification and Continuing Education</a></li>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
         <li><a href="http://agrilifeextension.tamu.edu/programs/index/index.php" title="">Program Index</a></li>
       </ul>
     </div>
@@ -348,9 +402,12 @@ if($extensiononly) {
     <div class="sub">
       <ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <li><a href="http://agrilifeextension.tamu.edu/programs/continuinged/index.php" title="">Certification and Continuing Education</a></li>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
         <li><a href="http://cnrit.tamu.edu/ganlab/GANlab_webpage.htm">Grazingland Animal Nutrition Laboratory</a></li>
         <li><a href="http://soiltesting.tamu.edu">Soil, Water, and Forage Testing Laboratory</a></li>
         <li><a href="http://plantclinic.tamu.edu">Texas Plant Disease Diagnostic Laboratory</a></li>
@@ -399,6 +456,9 @@ if($extensiononly) {
 </ul>			
 			<?php elseif($researchonly) : ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 			
 <ul>
   <li class="thickbox"><a href="http://agrilife.tamu.edu/topics-window/?KeepThis=true&#38;TB_iframe=true&#38;height=400&#38;width=600" title="Topics" class="thickbox"><span>Topics</span></a></li>
@@ -466,12 +526,15 @@ if($extensiononly) {
   </li>
 </ul>
 
+<<<<<<< HEAD
 =======
 			<ul>
 				<li class="thickbox"><a href="http://agrilife.tamu.edu/topics-window/?KeepThis=true&#38;TB_iframe=true&#38;height=400&#38;width=600" title="Topics" class="thickbox"><span>Topics</span></a></li>
 				<li class="thickbox"><a href="http://agrilife.tamu.edu/locations-window/?KeepThis=true&#38;TB_iframe=true&#38;height=400&#38;width=600" title="Locations" class="thickbox"><span>Locations</span></a></li>
 			<li><a class="sub" href="http://agriliferesearch.tamu.edu/units/index.php" title=""><span>Units</span></a> <div class="sub"><ul><li><a href="http://agriliferesearch.tamu.edu/units/campus/index.php" title="">On Campus Departments</a></li><li><a href="http://agriliferesearch.tamu.edu/units/centers/index.php" title="">State Wide Centers</a></li><li><a href="http://agriliferesearch.tamu.edu/units/institutes/index_institutes.php" title="">Institutes</a></li></ul></div></li><li><a class="sub" href="http://agriliferesearch.tamu.edu/inforesources/index.php" title=""><span>Resources</span></a> <div class="sub"><ul><li><a href="http://tfss.tamu.edu">Texas Foundation Seed Service</a></li><li><a href="http://agriliferesearch.tamu.edu/tard/index.php" title="">Texas Agricultural Research Database</a></li><li><a href="http://agriliferesearch.tamu.edu/about/commodity/index_commodity_associations.php" title="">Commodity Associations</a></li></ul></div></li><li><a class="sub" href="http://agriliferesearch.tamu.edu/communications/index.php" title=""><span>Communications</span></a> <div class="sub"><ul><li><a href="http://agnews.tamu.edu">AgriLife News</a></li><li><a href="http://agrilifebookstore.org">AgriLife Bookstore</a></li><li><a href="http://agrilifevents.tamu.edu/">Conference Services</a></li><li><a href="http://agrilife.tamu.edu/lifescapes">Lifescapes Magazine</a></li><li><a href="http://www.flickr.com/photos/agrilife/collections/">AgriLife Photos on Flickr</a></li><li><a href="http://youtube.com/agrilifevideo">AgriLife Videos on YouTube</a></li></ul></div></li><li><a class="sub" href="http://agriliferesearch.tamu.edu/corporaterelations/index.php" title=""><span>Corporate Relations</span></a> <div class="sub"><ul><li><a href="http://agriliferesearch.tamu.edu/corporaterelations/index.php" title="">Corporate Relations Office</a></li><li><a href="http://otc.tamu.edu">Office of Technology Commercialization</a></li></ul></div></li><li><a class="sub" href="http://agriliferesearch.tamu.edu/about/index.php" title=""><span>About</span></a> <div class="sub"><ul><li><a href="http://agriliferesearch.tamu.edu/about/index.php" title="">Overview of Research</a></li><li><a href="http://agriliferesearch.tamu.edu/about/leadership/index.php" title="">Administrative Leadership</a></li><li><a href="http://agriliferesearch.tamu.edu/about/research_impacts/index.php" title="">Research Impacts</a></li><li><a href="http://agriliferesearch.tamu.edu/about/science_roadmap/index_science_roadmap.php" title="">Science Roadmap</a></li><li><a href="http://agriliferesearch.tamu.edu/about/exceptional_items/index.php" title="">State Exceptional Items</a></li><li><a href="http://agofr.tamu.edu/accomplishments.htm">Federal Accomplishments &amp; Initiatives</a></li><li><a href="http://agrilife-extadmin.tamu.edu/report/ReportListResearch.htm">State Required Reports</a></li><li><a href="http://tamus.edu">Texas A&amp;M System</a></li></ul></div></li><li><a class="sub" href="http://agriliferesearch.tamu.edu/careers/index.php" title=""><span>Careers</span></a> <div class="sub"><ul><li><a href="https://greatjobs.tamu.edu">Job Postings</a></li><li><a href="http://agtraining.tamu.edu/emptutor.htm">Application Tutorials</a></li><li><a href="http://aghr.tamu.edu/potemp.htm">Prospective Employee Information</a></li><li><a href="http://aghr.tamu.edu/employmentfaq.htm">Frequently Asked Questions</a></li><li><a href="http://aghr.tamu.edu">AgriLife Human Resources</a></li></ul></div></li></ul>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 			
 			<?php else : ?>			
 

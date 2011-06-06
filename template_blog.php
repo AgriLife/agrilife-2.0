@@ -17,6 +17,9 @@ get_header();
 
 <?php // tward $args = array( 'cat' => '-'.$GLOBALS[portfolio_id], 'paged'=> $paged ); query_posts($args); ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <?php
 $temp = $wp_query;
 $wp_query= null;
@@ -25,6 +28,7 @@ $wp_query->query('posts_per_page=5'.'&paged='.$paged);
 while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
                         
+<<<<<<< HEAD
 =======
 <?php query_posts('posts_per_page=5'); ?>
 <?php //end tward ?>
@@ -36,6 +40,8 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
             
             
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 	
 	<div class="post-meta left-col">
@@ -59,14 +65,20 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 		<h2 class="storytitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<div class="storycontent">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 		<?php 
 		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 		  the_post_thumbnail('thumbnail', array('class' => 'alignright'));
 		} 
 		?>
+<<<<<<< HEAD
 =======
 		<?php if ( function_exists( 'get_the_image' ) ) { get_the_image( array( 'custom_key' => array( 'Thumbnail', 'thumbnail' ),'default_size' => 'medium', 'link_to_post' => true ,'image_scan' => 'true', 'image_class' => 'alignright' ) ); };?>
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 		<?php the_excerpt(); ?>
 		<?php //echo '<a href="'. get_permalink($post->ID) . '">' . 'Read More >>' . '</a>'; ?>
 	</div>
@@ -75,6 +87,7 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 
 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <?php endwhile; ?>
@@ -87,14 +100,20 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 =======
 	
 	<?php //comments_template(); // Get wp-comments.php template ?>
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 
-<?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
+<?php endwhile; ?>
+
 <div class="navigation">
 	<?php posts_nav_link(' &#8212; ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
 </div>
+<<<<<<< HEAD
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+<?php $wp_query = null; $wp_query = $temp;?>
+
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 				</div><!-- #main_content -->
 			</div><!-- #sidecontent -->
 			<?php get_sidebar(); ?>

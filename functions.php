@@ -10,6 +10,7 @@ TABLE OF CONTENTS
 
 - CDN Domain Variable
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Thumbnail Support
 - Menu Navigation Variables
 - Widget Areas
@@ -26,6 +27,17 @@ TABLE OF CONTENTS
 - Set Yoast Breadcrumb Defaults
 - Config Vipers Video Tags Defaults [not working]
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+- Thumbnail Support
+- Menu Navigation Variables
+- Widget Areas
+- Set Plugin Defaults
+	- $content_width
+	- Yoast Breadcrumb Defaults
+	- Gravity Form Defaults
+	- Vipers Video Tags Defaults [not working]
+	- Tiny MCE
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 - Set Excerpt More...
 - Include .js libraries
 - Allow additional tags in posts (For MU)
@@ -46,11 +58,16 @@ TABLE OF CONTENTS
 /* This brute-force CDN variable did help with Domain Mapped sites.  */
 /* Phase out if  DM plugin improves. */
 <<<<<<< HEAD
+<<<<<<< HEAD
 //$CDN = 'http://agrilifecdn.tamu.edu/wp-content/themes/agrilife-2.0';
 $CDN = '';
 =======
 $CDN = 'http://agrilife.presscdn.com/wp-content/themes/agrilife-2.0';
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+//$CDN = 'http://agrilifecdn.tamu.edu/wp-content/themes/agrilife-2.0';
+$CDN = '';
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 $theme_directory = ($CDN<>'' ? $CDN : get_bloginfo('template_directory'));  
 // 'template_directory' = parent theme if using a child
 define('THEME_TEMPLATEURL', $theme_directory);
@@ -61,14 +78,20 @@ register_nav_menus( array(
 ) );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 /* Add Thumbnail Support */
 if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 	add_theme_support( 'post-thumbnails');	
 	set_post_thumbnail_size( 150, 150, true );
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 /*	Widget Areas */
 function register_agrilife_sidebars() {
 	register_sidebar(array(
@@ -145,6 +168,9 @@ add_option("yoast_breadcrumbs",$yoast_bc_opt);
 /* END Config Yoast Breadcrumb Defaults */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 /* BEGIN Set Gravity Form Defaults */
 // This will be added in WordPress 3.1
 if(!function_exists('wp_dequeue_style')) {
@@ -163,22 +189,30 @@ function remove_gravityforms_style() {
 }
 add_action('wp_print_styles', 'remove_gravityforms_style');
 /* END Set Gravity Form Defaults */
+<<<<<<< HEAD
 =======
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 
 /* BEGIN Config Vipers Video Tags Defaults */
 /* This does not work. Want to turn off all options except YouTube by default.  */
 /* Setting it in PU works, but PU upgrades break it. */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+/*
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 $vvq_defaultsettings							= array();
 $vvq_defaultsettings['vimeo']['button'] 		= 0;
 $vvq_defaultsettings['veoh']['button'] 			= 0;
 $vvq_defaultsettings['dailymotion']['button'] 	= 0;
 $vvq_defaultsettings['bliptv']['button']		= 0;
 update_option("vvq_options",$vvq_defaultsettings);
+<<<<<<< HEAD
 <<<<<<< HEAD
 */
 /* END Config Vipers Video Tags Defaults */
@@ -193,6 +227,17 @@ add_filter('tiny_mce_before_init', create_function( '$a',
 /* END Config Vipers Video Tags Defaults */
 
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+*/
+/* END Config Vipers Video Tags Defaults */
+
+/* BEGIN Tiny MCE */
+/* Allow iframe content to 'stick' when toggling visual editor */
+add_filter('tiny_mce_before_init', create_function( '$a',
+'$a["extended_valid_elements"] = "iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]"; return $a;') );
+/* END Tiny MCE */
+
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 // Changing excerpt more
 function new_excerpt_more($excerpt) {
 	//return str_replace('[...]', '<a href="'. get_permalink($post->ID) . '">' . 'Read More...' . '</a>', $excerpt);
@@ -247,9 +292,13 @@ function theme_js_head_load(){
 		wp_enqueue_script('jquery-plugins', THEME_TEMPLATEURL.'/scripts/jquery.plugins.js', array('jquery'), '1.1');
 		wp_enqueue_script('theme-nav', THEME_TEMPLATEURL.'/scripts/inner.js', array('jquery'), '1.0');
 		wp_enqueue_script('jquery-cycle', THEME_TEMPLATEURL.'/scripts/jquery.cycle.js', array('jquery'), '2.63');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+		wp_enqueue_script('cufon', THEME_TEMPLATEURL.'/scripts/cufon.js');
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 	}

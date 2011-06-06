@@ -25,10 +25,14 @@ get_header();
 		  </div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<?php mail('travisward@gmail.com', 'members only template use!', 'used on '.get_permalink($post->ID));?>
 =======
 	
 >>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
+=======
+		<?php mail('travisward@gmail.com', 'members only template use!', 'used on '.get_permalink($post->ID));?>
+>>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
 	<?php endwhile; endif; ?>     
 	                   
 <?php } else { ?>
