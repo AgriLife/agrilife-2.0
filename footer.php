@@ -18,7 +18,11 @@
         	<?php
         	/*
         	Rewrite Edit Tab for Mapped Domains
+<<<<<<< HEAD
 			*/
+=======
+		*/
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 			function unmapped_admin_link($link) {
 				return str_replace('https','http', $link);
 			}
@@ -32,7 +36,11 @@
 				echo "<!-- No Mapping-->";
 				edit_post_link('You are Logged in: Edit this entry.', '', '');
 			}
+<<<<<<< HEAD
 			?>
+=======
+		?>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
         	<div id="tamus">
         	<?php if($collegeonly) : ?>
 				<a href="http://www.tamu.edu"><img src="<?php echo THEME_TEMPLATEURL;?>/images/tamu-logo.gif" alt="Texas A&amp;M University" /></a>
@@ -89,4 +97,8 @@
 	pageTracker._trackPageview();
 	} catch(err) {}</script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981

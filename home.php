@@ -7,7 +7,11 @@ get_header();
 ?>
 <div id="content">
 	<div id="sidecontent">
+<<<<<<< HEAD
     <?php //if ( function_exists( "yoast_breadcrumb" ) ) yoast_breadcrumb('', ''); ?>
+=======
+    <?php if ( function_exists( "yoast_breadcrumb" ) ) yoast_breadcrumb('', ''); ?>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
     
 <div id="main_content"> 
 
@@ -37,12 +41,16 @@ get_header();
 	<div class="post-content right-col">
 		<h2 class="storytitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<div class="storycontent">
+<<<<<<< HEAD
 		<?php 
 		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 		  the_post_thumbnail('thumbnail', array('class' => 'alignright'));
 		} 
 		?>
 
+=======
+		<?php if ( function_exists( 'get_the_image' ) ) { get_the_image( array( 'custom_key' => array( 'Thumbnail', 'thumbnail' ),'default_size' => 'medium', 'link_to_post' => true ,'image_scan' => 'true', 'image_class' => 'alignright' ) ); };?>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 		<?php the_excerpt(); ?>
 		<?php //echo '<a href="'. get_permalink($post->ID) . '">' . 'Read More >>' . '</a>'; ?>
 	</div>

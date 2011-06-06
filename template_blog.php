@@ -16,6 +16,7 @@ get_header();
 
 
 <?php // tward $args = array( 'cat' => '-'.$GLOBALS[portfolio_id], 'paged'=> $paged ); query_posts($args); ?>
+<<<<<<< HEAD
 <?php
 $temp = $wp_query;
 $wp_query= null;
@@ -24,6 +25,17 @@ $wp_query->query('posts_per_page=5'.'&paged='.$paged);
 while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
                         
+=======
+<?php query_posts('posts_per_page=5'); ?>
+<?php //end tward ?>
+<?php if (have_posts()) : $count = 0; ?>
+
+
+<?php while (have_posts()) : the_post(); $count++; ?>
+            
+            
+            
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 	
 	<div class="post-meta left-col">
@@ -46,11 +58,15 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 	<div class="post-content right-col">
 		<h2 class="storytitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<div class="storycontent">
+<<<<<<< HEAD
 		<?php 
 		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 		  the_post_thumbnail('thumbnail', array('class' => 'alignright'));
 		} 
 		?>
+=======
+		<?php if ( function_exists( 'get_the_image' ) ) { get_the_image( array( 'custom_key' => array( 'Thumbnail', 'thumbnail' ),'default_size' => 'medium', 'link_to_post' => true ,'image_scan' => 'true', 'image_class' => 'alignright' ) ); };?>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 		<?php the_excerpt(); ?>
 		<?php //echo '<a href="'. get_permalink($post->ID) . '">' . 'Read More >>' . '</a>'; ?>
 	</div>
@@ -59,6 +75,7 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 
 </div>
 
+<<<<<<< HEAD
 
 <?php endwhile; ?>
 
@@ -67,6 +84,17 @@ while ($wp_query->have_posts()) : $wp_query->the_post();
 </div>
 <?php $wp_query = null; $wp_query = $temp;?>
 
+=======
+	
+	<?php //comments_template(); // Get wp-comments.php template ?>
+
+<?php endwhile; else: ?>
+<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
+<div class="navigation">
+	<?php posts_nav_link(' &#8212; ', __('&laquo; Newer Posts'), __('Older Posts &raquo;')); ?>
+</div>
+>>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
 				</div><!-- #main_content -->
 			</div><!-- #sidecontent -->
 			<?php get_sidebar(); ?>
