@@ -18,7 +18,7 @@
         	<?php
         	/*
         	Rewrite Edit Tab for Mapped Domains
-		*/
+			*/
 			function unmapped_admin_link($link) {
 				return str_replace('https','http', $link);
 			}
@@ -32,7 +32,7 @@
 				echo "<!-- No Mapping-->";
 				edit_post_link('You are Logged in: Edit this entry.', '', '');
 			}
-		?>
+			?>
         	<div id="tamus">
         	<?php if($collegeonly) : ?>
 				<a href="http://www.tamu.edu"><img src="<?php echo THEME_TEMPLATEURL;?>/images/tamu-logo.gif" alt="Texas A&amp;M University" /></a>

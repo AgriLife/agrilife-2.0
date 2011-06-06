@@ -11,25 +11,23 @@
         <form id="sitesearch" method="get" action="<?php bloginfo('home'); ?>/">
         <fieldset>
             <input type="text" name="s" id="s" maxlength="256" onfocus="this.value=''; this.onfocus=null;" value="Search" class="search-box" />
-            <input type="image" src="<?php bloginfo('template_directory'); ?>/images/searchbutton.gif" value="<?php esc_attr_e('Search'); ?>" alt="Search" name="search" class="search-button"/>
+            <input type="image" src="<?php echo THEME_TEMPLATEURL;?>/images/searchbutton.gif" value="<?php esc_attr_e('Search'); ?>" alt="Search" name="search" class="search-button"/>
         </fieldset>
         </form>
         
         
         
-        <?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+        <?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  
+        The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+		
 		<div id="sitenav">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('main-right-sidebar') ) : ?>
+		
 		<?php wp_nav_menu( array( 'container' => '' , 'theme_location' => 'primary' ) ); ?>
-        </div>
         
-        <!--
-        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('main-right-sidebar') ) : ?>
-        <ul id="sitenav">
-			<?php wp_list_pages('title_li=&depth=3&sort_column=menu_order');  ?>
-        </ul>
         <?php endif; //dynamic_sidebar ?>
-        -->
-        
+        </div>
+                
         <?php 
            GLOBAL $options; 
            if ( $options['feedBurner'] <> "" ) : ?>

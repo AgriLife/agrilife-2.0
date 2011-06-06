@@ -14,7 +14,11 @@ get_header();
     
 <div id="main_content"> 
 
-
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+			<?php if ( !is_front_page() ) : ?>
+		  	  <h2><?php the_title(); ?></h2>
+		    <?php endif; ?>
 <?php
 	$youTube = get_post_meta($post->ID, "youtube", true);
 	//Check for well-formed playlist url
@@ -40,10 +44,10 @@ $attachments = get_posts($args);
 ?>
 -->
 <div>
-    <div class="clear"></div>										
-    <div>
+    										
+    
     	<?php if (count($attachments) > 0): ?>
-        <div>
+        	<div class="clear"></div>
             <div id="features">
               <?php if($youTube!=''): ?>
               <ul class="tabs" id="featuresnav">
@@ -78,30 +82,19 @@ $attachments = get_posts($args);
               	</div> <!-- .tab -->
               <?php endif; ?>
             </div><!-- #features-->		
-        </div>
+        	<div class="clear"></div>
         <?php endif; ?>
         
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<!-- <h4 class="front-headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h4>-->
-        	<p class="front-summary"><?php the_content(__('(more...)')); ?></p>
+        
+        	<?php the_content(__('(more...)')); ?>
         </div>
         <?php  endwhile; else: ?>
             <!-- <p><?php _e('Sorry, no posts matched your criteria.'); ?></p> -->
         <?php endif; ?>
         		
-        </div>  
+         
     </div>
 	
-	
-	
-
-
-
-
-
-
-
 
 				</div><!-- #main_content -->
 			</div><!-- #sidecontent -->

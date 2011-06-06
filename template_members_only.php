@@ -24,7 +24,7 @@ get_header();
 		    <?php the_content(__('(more...)')); ?>
 		  </div>
 		</div>
-	
+		<?php mail('travisward@gmail.com', 'members only template use!', 'used on '.get_permalink($post->ID));?>
 	<?php endwhile; endif; ?>     
 	                   
 <?php } else { ?>

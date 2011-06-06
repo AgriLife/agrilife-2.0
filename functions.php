@@ -9,11 +9,15 @@
 TABLE OF CONTENTS
 
 - CDN Domain Variable
+- Thumbnail Support
 - Menu Navigation Variables
 - Widget Areas
-- Set $content_width
-- Set Yoast Breadcrumb Defaults
-- Config Vipers Video Tags Defaults [not working]
+- Set Plugin Defaults
+	- $content_width
+	- Yoast Breadcrumb Defaults
+	- Gravity Form Defaults
+	- Vipers Video Tags Defaults [not working]
+	- Tiny MCE
 - Set Excerpt More...
 - Include .js libraries
 - Allow additional tags in posts (For MU)
@@ -33,7 +37,8 @@ TABLE OF CONTENTS
 
 /* This brute-force CDN variable did help with Domain Mapped sites.  */
 /* Phase out if  DM plugin improves. */
-$CDN = 'http://agrilife.presscdn.com/wp-content/themes/agrilife-2.0';
+//$CDN = 'http://agrilifecdn.tamu.edu/wp-content/themes/agrilife-2.0';
+$CDN = '';
 $theme_directory = ($CDN<>'' ? $CDN : get_bloginfo('template_directory'));  
 // 'template_directory' = parent theme if using a child
 define('THEME_TEMPLATEURL', $theme_directory);
@@ -42,6 +47,12 @@ define('THEME_TEMPLATEURL', $theme_directory);
 register_nav_menus( array(
 	'primary' => __( 'Primary Navigation', 'agrilife' ),
 ) );
+
+/* Add Thumbnail Support */
+if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+	add_theme_support( 'post-thumbnails');	
+	set_post_thumbnail_size( 150, 150, true );
+}
 
 /*	Widget Areas */
 function register_agrilife_sidebars() {
@@ -118,17 +129,43 @@ $yoast_bc_opt['searchprefix'] 		= "Search for";
 add_option("yoast_breadcrumbs",$yoast_bc_opt);
 /* END Config Yoast Breadcrumb Defaults */
 
+/* BEGIN Set Gravity Form Defaults */
+// This will be added in WordPress 3.1
+if(!function_exists('wp_dequeue_style')) {
+	function wp_dequeue_style( $handle ) {
+	    global $wp_styles;
+	    if ( !is_a($wp_styles, 'WP_Styles') )
+	        $wp_styles = new WP_Styles(); 
+
+	    $wp_styles->dequeue( $handle );
+	}
+}
+
+// Remove The Gravity Form Stylesheet
+function remove_gravityforms_style() {
+	wp_dequeue_style('gforms_css');
+}
+add_action('wp_print_styles', 'remove_gravityforms_style');
+/* END Set Gravity Form Defaults */
 
 /* BEGIN Config Vipers Video Tags Defaults */
 /* This does not work. Want to turn off all options except YouTube by default.  */
 /* Setting it in PU works, but PU upgrades break it. */
+/*
 $vvq_defaultsettings							= array();
 $vvq_defaultsettings['vimeo']['button'] 		= 0;
 $vvq_defaultsettings['veoh']['button'] 			= 0;
 $vvq_defaultsettings['dailymotion']['button'] 	= 0;
 $vvq_defaultsettings['bliptv']['button']		= 0;
 update_option("vvq_options",$vvq_defaultsettings);
+*/
 /* END Config Vipers Video Tags Defaults */
+
+/* BEGIN Tiny MCE */
+/* Allow iframe content to 'stick' when toggling visual editor */
+add_filter('tiny_mce_before_init', create_function( '$a',
+'$a["extended_valid_elements"] = "iframe[id|class|title|style|align|frameborder|height|longdesc|marginheight|marginwidth|name|scrolling|src|width]"; return $a;') );
+/* END Tiny MCE */
 
 // Changing excerpt more
 function new_excerpt_more($excerpt) {
@@ -163,7 +200,7 @@ function theme_js_head_load(){
 		wp_enqueue_script('jquery-plugins', THEME_TEMPLATEURL.'/scripts/jquery.plugins.js', array('jquery'), '1.1');
 		wp_enqueue_script('theme-nav', THEME_TEMPLATEURL.'/scripts/inner.js', array('jquery'), '1.0');
 		wp_enqueue_script('jquery-cycle', THEME_TEMPLATEURL.'/scripts/jquery.cycle.js', array('jquery'), '2.63');
-
+		wp_enqueue_script('cufon', THEME_TEMPLATEURL.'/scripts/cufon.js');
 
 	}
 }
