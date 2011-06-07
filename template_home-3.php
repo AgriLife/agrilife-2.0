@@ -11,15 +11,8 @@ get_header();
 <div id="content">
 	<div id="sidecontent">
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
 	<?php if ( function_exists("yoast_breadcrumb") && !is_front_page() ) yoast_breadcrumb('', ''); ?>
-=======
-	<?php if ( function_exists( "yoast_breadcrumb" ) ) yoast_breadcrumb('', ''); ?>
->>>>>>> 166bb97bc5f5a0bfa6752e6952cc33775b9c6981
-=======
-	<?php if ( function_exists("yoast_breadcrumb") && !is_front_page() ) yoast_breadcrumb('', ''); ?>
->>>>>>> 38634df70df74028ebbaf8112314299de3f7dbfd
+
 	<div id="main_content"> 
 
 <?php
@@ -28,6 +21,8 @@ get_header();
 	
 	if(stristr($youTube,'http://www.youtube.com/view_play_list?p=')){
 		$youTube = 'http://gdata.youtube.com/feeds/api/playlists/'.substr($youTube,40);
+	} elseif(stristr($youTube,'http://www.youtube.com/playlist?p=PL')){
+		$youTube = 'http://gdata.youtube.com/feeds/api/playlists/'.substr($youTube,36);
 	} elseif(stristr($youTube,'http://gdata.youtube.com/feeds/api/playlists/')) {
 		$youTube = $youTube;
 	} else {
