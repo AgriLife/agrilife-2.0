@@ -274,7 +274,7 @@ if($extensiononly) {
       <ul>
         <li><a href="http://agrilifeextension.tamu.edu/extresources/index.php" title="">Resources Overview</a></li>
         <li><a href="http://extension.org/ask">Ask an Expert</a></li>
-        <li><a href="http://agrilifebookstore.org">AgriLife Bookstore</a></li>
+        <li><a href="https://agrilifelearn.tamu.edu/">AgriLife Bookstore</a></li>
         <li><a href="http://youtube.com/agrilifevideo">AgriLife YouTube Videos</a></li>
         <li><a href="http://flickr.com/photos/agrilife">AgriLife Flickr Photos</a></li>
       </ul>
